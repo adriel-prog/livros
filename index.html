@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livros</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      form {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input[type="button"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      .delete-button {
+        background-color: #f44336;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .delete-button:hover {
+        background-color: #d32f2f;
+      }
+
+      .update-button {
+        background-color: #2196f3;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .update-button:hover {
+        background-color: #0b7dda;
+      }
+      .update-progress-button {
+        background-color: #2196f3;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .update-progress-button:hover {
+        background-color: #0b7dda;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Tabela de Livros</h2>
+      <div id="tabelaLivros"></div>
+
+      <h2>Adicionar Livro</h2>
+      <form id="formLivro">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required /><br />
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required /><br />
+
+        <label for="totalDePaginas">Total de Páginas:</label>
+        <input
+          type="number"
+          id="totalDePaginas"
+          name="totalDePaginas"
+          required
+        /><br />
+
+        <input type="button" value="Cadastrar" onclick="cadastrarLivro()" />
+      </form>
+    </div>
+
+    <script src="malhalivros.js"></script>
+  </body>
+</html>
